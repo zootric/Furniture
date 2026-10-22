@@ -3,7 +3,7 @@ import type { Product } from "@/data/types";
 
 export function RelatedProducts({ products }: { products: Product[] }) {
   return (
-    <section aria-labelledby="related-heading" className="px-5">
+    <section aria-labelledby="related-heading" className="frame px-5">
       <hr className="rule" />
       <h2 id="related-heading" className="type-section mt-10 text-muted tablet:mt-14">
         You might also like

@@ -62,7 +62,7 @@ export function SiteHeader() {
       </a>
 
       {/* Tablet & desktop bar */}
-      <div className="hidden px-5 pt-4 tablet:block">
+      <div className="frame hidden px-5 pt-4 tablet:block">
         <nav
           aria-label="Primary"
           className={`flex items-center justify-between border-b pb-2 ${

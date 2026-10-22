@@ -24,14 +24,14 @@ export default function NotFound() {
     <main className="relative h-svh min-h-[560px] overflow-hidden bg-[#1e2a29] text-cream">
       <Image src="/images/not-found/hero.png" alt="" fill priority sizes="100vw" className="object-cover" />
       <div aria-hidden="true" className="absolute inset-0 bg-foreground/70" />
-      <div className="absolute inset-0 hidden items-center px-5 pt-10 desktop:flex">
+      <div className="frame absolute inset-0 hidden items-center px-5 pt-10 desktop:flex">
         {intro}
         <p aria-hidden="true" className="ml-5 text-[290px] leading-[1.2] tracking-[-0.04em]">
           404
         </p>
         <div className="ml-auto">{note}</div>
       </div>
-      <div className="absolute inset-0 flex flex-col justify-end gap-5 px-2.5 pb-10 tablet:px-5 desktop:hidden">
+      <div className="frame absolute inset-0 flex flex-col justify-end gap-5 px-2.5 pb-10 tablet:px-5 desktop:hidden">
         {intro}
         {note}
         <p aria-hidden="true" className="text-[186px] leading-[1.2] tracking-[-0.04em] tablet:text-[232px]">

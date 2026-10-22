@@ -33,7 +33,7 @@ export default async function ArticlePage({ params }: { params: Promise<Params> 
   return (
     <>
       <article>
-        <header className="px-5 pt-[var(--page-top)]">
+        <header className="frame px-5 pt-[var(--page-top)]">
           <p className="type-body flex gap-[5px]">
             <span>Category:</span>
             <span className="text-muted">{article.category}</span>

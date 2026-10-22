@@ -3,6 +3,7 @@ import { ScrollRevealText } from "@/components/home/ScrollRevealText";
 import { ArrowLink } from "@/components/ui/ArrowLink";
 import { BlurText } from "@/components/ui/BlurText";
 import { MediaCard } from "@/components/ui/MediaCard";
+import { Reveal } from "@/components/ui/Reveal";
 import { SplitHero } from "@/components/ui/SplitHero";
 import { getProduct } from "@/data/products";
 import { materials, quietFormsSlugs } from "@/data/site";
@@ -39,24 +40,26 @@ export default function HomePage() {
       />
 
       {/* Collection 01 — Quiet Forms */}
-      <section aria-labelledby="collection-heading" className="px-2.5 pt-10 tablet:px-5">
+      <section aria-labelledby="collection-heading" className="frame px-2.5 pt-10 tablet:px-5">
         <hr className="rule" />
         <BlurText id="collection-heading" text="Collection 01 — Quiet Forms" className="type-section mt-14 text-muted" />
         <div className="mt-5 flex flex-col gap-5 desktop:flex-row desktop:items-start desktop:justify-between">
-          <div className="type-body max-w-[367px] text-muted">
+          <Reveal className="type-body max-w-[367px] text-muted">
             <p>A study in proportion and weight.</p>
             <p>
               Powder-coated steel. Solid oak. Natural linen. Each piece is made in small batches. No seasonal excess.
               No artificial urgency.
             </p>
-          </div>
-          <ArrowLink href="/shop" variant="button" className="self-start">
-            Explore Collection
-          </ArrowLink>
+          </Reveal>
+          <Reveal offset={15} className="flex self-start">
+            <ArrowLink href="/shop" variant="button">
+              Explore Collection
+            </ArrowLink>
+          </Reveal>
         </div>
         <ul className="mt-8 grid grid-cols-1 gap-5 tablet:grid-cols-2 desktop:grid-cols-3">
           {collection.map((product, i) => (
-            <li key={product.slug} className={i === 2 ? "tablet:max-desktop:hidden" : undefined}>
+            <Reveal as="li" key={product.slug} className={i === 2 ? "tablet:max-desktop:hidden" : ""}>
               <MediaCard
                 href={`/shop/${product.slug}`}
                 image={product.image}
@@ -66,13 +69,13 @@ export default function HomePage() {
                 className="aspect-[453/547]"
                 sizes="(min-width: 810px) 33vw, 100vw"
               />
-            </li>
+            </Reveal>
           ))}
         </ul>
       </section>
 
       {/* Statement */}
-      <section aria-label="Studio statement" className="mt-10 flex flex-col gap-[34px] tablet:flex-row tablet:items-center tablet:gap-0">
+      <section aria-label="Studio statement" className="frame mt-10 flex flex-col gap-[34px] tablet:flex-row tablet:items-center tablet:gap-0">
         <div className="px-2.5 pt-10 tablet:flex-1 tablet:pl-5 tablet:pr-0 tablet:pt-0">
           <ScrollRevealText text={statement} className="type-statement" />
         </div>
@@ -88,7 +91,7 @@ export default function HomePage() {
       </section>
 
       {/* Materials */}
-      <section id="materials" aria-labelledby="materials-heading" className="scroll-mt-20 px-2.5 pt-10 tablet:px-5">
+      <section id="materials" aria-labelledby="materials-heading" className="frame scroll-mt-20 px-2.5 pt-10 tablet:px-5">
         <hr className="rule" />
         <BlurText id="materials-heading" text="Materials" className="type-section mt-14 text-muted" />
         <p className="type-body mt-5 max-w-[494px] text-muted">
@@ -98,7 +101,7 @@ export default function HomePage() {
         </p>
         <ul className="mt-8 grid grid-cols-1 gap-5 tablet:grid-cols-3 tablet:gap-2.5 desktop:gap-5">
           {materials.map((material) => (
-            <li key={material.name}>
+            <Reveal as="li" key={material.name}>
               <MediaCard
                 image={material.image}
                 alt={`${material.name} — material study`}
@@ -109,7 +112,7 @@ export default function HomePage() {
                 className="aspect-[453/547]"
                 sizes="(min-width: 810px) 33vw, 100vw"
               />
-            </li>
+            </Reveal>
           ))}
         </ul>
       </section>
@@ -124,16 +127,16 @@ export default function HomePage() {
           className="object-cover"
         />
         <div aria-hidden="true" className="absolute inset-0 bg-foreground/50" />
-        <div className="absolute inset-x-0 top-0 px-2.5 pt-20 tablet:px-5">
+        <div className="frame absolute inset-x-0 top-0 px-2.5 pt-20 tablet:px-5">
           <BlurText id="spaces-heading" text="Styled in Real Spaces" className="type-section" />
-          <div className="type-body mt-5">
+          <Reveal className="type-body mt-5">
             <p>No staged showrooms.</p>
             <p>No artificial lighting. Just homes. Studios.</p>
             <p>Corners where life actually happens.</p>
-          </div>
-          <ArrowLink href="/lookbook" className="mt-5">
-            View Lookbook
-          </ArrowLink>
+          </Reveal>
+          <Reveal offset={5} className="mt-5 flex">
+            <ArrowLink href="/lookbook">View Lookbook</ArrowLink>
+          </Reveal>
         </div>
       </section>
     </>

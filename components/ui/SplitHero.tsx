@@ -27,7 +27,7 @@ export function SplitHero({ image, alt, title, left, right, phoneTop, align = "c
     <section className="relative h-svh min-h-[640px] overflow-hidden bg-[#2a2a29] text-cream">
       <Image src={image} alt={alt} fill priority sizes="100vw" className="object-cover" />
       <div aria-hidden="true" className="absolute inset-0 bg-foreground" style={{ opacity: overlay }} />
-      <div className="absolute inset-0 flex flex-col justify-between px-2.5 pb-10 pt-20 tablet:justify-end tablet:px-5">
+      <div className="frame absolute inset-0 flex flex-col justify-between px-2.5 pb-10 pt-20 tablet:justify-end tablet:px-5">
         <div className={`tablet:hidden ${phoneTop === "left" ? "mt-[max(0px,calc(100svh-797px))]" : ""}`}>{top}</div>
         <div>
           <div className="tablet:hidden">{bottom}</div>

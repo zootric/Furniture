@@ -33,7 +33,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
 
   return (
     <>
-      <article className="px-5 pt-[var(--page-top)]">
+      <article className="frame px-5 pt-[var(--page-top)]">
         <div className="flex flex-col gap-5 desktop:flex-row">
           <div className="relative aspect-[570/600] w-full shrink-0 overflow-hidden rounded-2xl bg-[#e7e3dc] desktop:w-[570px] desktop:self-start">
             <Image
@@ -59,7 +59,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
         </div>
       </article>
 
-      <div className="mt-20 px-5 tablet:mt-[120px]">
+      <div className="frame mt-20 px-5 tablet:mt-[120px]">
         <hr className="rule" />
       </div>
       <div className="mt-14">

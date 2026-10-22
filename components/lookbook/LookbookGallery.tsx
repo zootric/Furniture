@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Lightbox } from "@/components/ui/Lightbox";
 import { MediaCard } from "@/components/ui/MediaCard";
+import { Reveal } from "@/components/ui/Reveal";
 import { lookbook, lookbookCategories } from "@/data/lookbook";
 
 type Filter = (typeof lookbookCategories)[number];
@@ -39,7 +40,7 @@ export function LookbookGallery() {
 
       <ul className="mt-10 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-5" aria-live="polite">
         {entries.map((entry, i) => (
-          <li key={entry.title}>
+          <Reveal as="li" key={entry.title}>
             <MediaCard
               image={entry.image}
               alt={entry.title}
@@ -49,7 +50,7 @@ export function LookbookGallery() {
               className="h-[460px]"
               sizes="(min-width: 1200px) 25vw, (min-width: 810px) 33vw, (min-width: 640px) 50vw, 100vw"
             />
-          </li>
+          </Reveal>
         ))}
       </ul>
 

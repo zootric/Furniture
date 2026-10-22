@@ -52,7 +52,9 @@ public/images        photography, grouped by page or product
 ```
 
 Design tokens (colours, fonts, breakpoints) live in `app/globals.css`. Breakpoints follow
-the reference: phone below 810px, tablet 810–1199px, desktop from 1200px.
+the reference: phone below 810px, tablet 810–1199px, desktop from 1200px. Above 1440px,
+content stays in a centred 1440px frame (`.frame`), and only photographic backgrounds and
+the product gallery strip run full width, as on the reference.
 
 ## Fidelity notes
 

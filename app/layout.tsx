@@ -36,7 +36,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={`${inter.variable} ${interTight.variable} ${bebasNeue.variable}`}>
       <body>
         <noscript>
-          <style>{`.blur-text-char{opacity:1!important;animation:none!important}`}</style>
+          <style>{`.blur-text-char,.reveal{opacity:1!important;animation:none!important;transform:none!important}`}</style>
         </noscript>
         {children}
       </body>

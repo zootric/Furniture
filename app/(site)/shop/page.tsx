@@ -12,7 +12,7 @@ export default function ShopPage() {
   return (
     <>
       <PageHeading title="Furniture & Objects" intro="Designed in-house. Produced in limited batches." />
-      <section aria-label="Products" className="px-5 pb-20 pt-[60px] tablet:pt-20">
+      <section aria-label="Products" className="frame px-5 pb-20 pt-[60px] tablet:pt-20">
         <ProductGrid products={products} priorityCount={4} />
       </section>
     </>

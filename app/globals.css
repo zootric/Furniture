@@ -180,6 +180,13 @@
     }
   }
 
+  /* Content frame: the reference centres every page in a 1440px column on wider screens. */
+  .frame {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
   .rule {
     height: 1px;
     border: 0;
@@ -211,6 +218,17 @@
   }
 }
 
+.reveal {
+  transition:
+    opacity 0.6s var(--ease-quiet),
+    transform 0.6s var(--ease-quiet);
+}
+
+.reveal[data-shown="false"] {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 30px));
+}
+
 .blur-text-char {
   display: inline-block;
   white-space: pre;
@@ -232,6 +250,10 @@
   }
   .marquee-track {
     animation: none !important;
+  }
+  .reveal[data-shown] {
+    opacity: 1 !important;
+    transform: none !important;
   }
   *,
   *::before,

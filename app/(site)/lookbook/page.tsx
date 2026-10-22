@@ -11,7 +11,7 @@ export default function LookbookPage() {
   return (
     <>
       <PageHeading title="Gallery" />
-      <section aria-label="Lookbook" className="px-5 pb-20 pt-[60px] tablet:pt-20">
+      <section aria-label="Lookbook" className="frame px-5 pb-20 pt-[60px] tablet:pt-20">
         <LookbookGallery />
       </section>
     </>
