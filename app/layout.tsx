@@ -9,8 +9,12 @@ const bebasNeue = Bebas_Neue({ subsets: ["latin"], weight: "400", variable: "--f
 const description =
   "Arlow designs calm, made-to-order furniture and objects in solid oak, ash and walnut. Built by hand, finished in natural oils, made to last.";
 
+// Absolute base for Open Graph URLs: an explicit site URL, else the Vercel production domain, else local dev.
+const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? (vercelHost ? `https://${vercelHost}` : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Arlow | Quiet, Handmade Solid Wood Furniture",
     template: "%s | Arlow",

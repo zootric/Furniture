@@ -19,7 +19,7 @@ Optional environment variables:
 | Variable | Purpose |
 | --- | --- |
 | `NEWSLETTER_WEBHOOK_URL` | Forward newsletter sign-ups (`{ email, source }` JSON POST) to a mailing-list service. Without it, the form validates the address but tells the visitor sign-ups are not connected yet. Nothing is stored. |
-| `NEXT_PUBLIC_SITE_URL` | Absolute site URL used for Open Graph image URLs. |
+| `NEXT_PUBLIC_SITE_URL` | Absolute site URL used for Open Graph image URLs. On Vercel it defaults to the project's production domain. |
 
 ## Routes
 
